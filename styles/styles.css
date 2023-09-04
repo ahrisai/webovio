@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header {
+  padding: 24px 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger {
+  --offset-horizontal: 11px;
+  --offset-vertical: 14px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding: var(--offset-vertical) var(--offset);
+  background-color: #f5f6f7;
+  border-radius: 50%;
+}
+
+.burger-line {
+  position: absolute;
+  left: 50%;
+  top: var(--offset-vertical);
+  transform: translate(-50%);
+  display: inline-block;
+  width: calc(100% - (var(--offset-horizontal) * 2));
+  height: 2px;
+  background-color: #000;
+}
+.burger-line:nth-child(2) {
+  top: calc(var(--offset-vertical) + 6px);
+}
+
+.burger-line:nth-child(3) {
+  top: calc(var(--offset-vertical) + 12px);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.hero {
+  padding-top: 194px;
+  background-image: url("../images/heroBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 210px;
+}
+
+.link {
+  display: inline-flex;
+  color: #d4d6d4;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 15px;
+  text-decoration: none;
+transition: color .3s  ease-in-out ;
+}
+
+.link:hover {
+    color: #ffd723;
+  }
+
+.link svg{
+    fill:currentColor;
+      height: 14px;
+      width: 15px;
+    }
+    
+    .link span{
+        text-indent: 10px;
+        border-bottom: 1px solid currentColor;
+    }
+
+
+
+.hero-subtitle {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  display: block;
+  margin-bottom: 22px;
+}
+
+.hero-content {
+  max-width: 616px;
+}
+
+.hero-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 74px;
+  margin-bottom: 50px;
+}
+
+.hero-desc {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 60px;
+}
+
+.services-title{
+color: #4D533C;
+font-size: 36px;
+font-weight: 700;
+line-height: 46px; 
+max-width: 607px;
+margin-top:150px ;
+margin-bottom: 70px;
+}
+
+.services-list{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.services-list-item{
+padding: 35px 15px;
+display: flex;
+flex-direction: column;
+position: relative;
+max-width: 255px;
+height: 310px;
+
+}
+
+.list-item-title{
+
+color: #4D533C;
+font-size: 24px;
+font-weight: 500;
+line-height: 34px; 
+text-transform: uppercase;
+max-width: 180px;
+margin-bottom: 38px;
+}
+.list-item-description{
+margin-top: 30px;
+max-width: 194px;
+color: rgba(33, 56, 66, 0.60);
+font-size: 14px;
+
+font-weight: 500;
+line-height: 26px; /* 185.714% */
+}
+.list-item-link{
+position: absolute;
+bottom: 0;
+}
+
+
+
+
